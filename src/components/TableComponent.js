@@ -11,11 +11,13 @@ function TableComponent(properties) {
 
             <table>
                 <thead>
-                    {
-                        columnas.map((col) => {
-                            return(<th key={col.name}>{col.name}</th>)
-                        })
-                    }
+                    <tr>
+                        {
+                            columnas.map((col) => {
+                                return(<th key={col.name}>{col.name}</th>)
+                            })
+                        }
+                    </tr>
                 </thead>
                 <tbody>
                     {
@@ -23,8 +25,8 @@ function TableComponent(properties) {
                             return(
                                 <tr key={p.dniInpector}>
                                     <td>{p.dniInpector}</td>
-                                    <td>{p.dsnombreInpector}</td>
-                                    <td>{p.dsemailInpector}</td>
+                                    <td>{p.dsnombreInspector}</td>
+                                    <td>{p.dsemailInspector}</td>
                                 </tr>
                             )
                         })
